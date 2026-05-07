@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PigHead</title>
+  <style>
+
+    body {
+      font-family: Ubuntu
+, sans-serif;
+      background-image: url("https://static.vecteezy.com/system/resources/previews/041/854/334/non_2x/black-and-white-abstract-organic-shapes-pattern-background-in-trendy-retro-style-illustration-vector.jpg");
+      padding: 20px;
+      color: white;
+    }
+    
+    h1{
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+    .container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: 	black;
+      border-radius: 8px;
+      padding: 15px;
+      width: 260px;
+      color: black;
+      border: solid;
+      border-color: black;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      background-image: url("https://static.vecteezy.com/system/resources/previews/041/854/334/non_2x/black-and-white-abstract-organic-shapes-pattern-background-in-trendy-retro-style-illustration-vector.jpg");
+    }
+
+    .box h3 {
+      margin: 0 0 3px;
+      font-family: Ubuntu;
+    }
+
+    .box p {
+      font-size: 18px;
+      color: black;
+    }
+
+    .box button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: solid;
+      border-radius: 6px;
+      background: white	;
+      color: Black;
+      cursor: pointer;
+    }
+
+    .box button:hover {
+      background: black;
+      color: white; 
+      transform: scale(1.12,1.12);
+      border-color:white;
+      border width: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center">PigHead </h1>
+ 
+
+<div class="container" id="boxContainer"></div>
+
+<script type="application/json" id="linkData">
+[
+  
+  {
+    "name": "Balatro",
+    "description": "",
+    "url": "https://raw.githubusercontent.com/9kwngxqj4q-stack/Balatro/refs/heads/main/balatro.html"
+  },
+  {
+    "name": "Minecraft",
+    "description": "",
+    "url": "https://raw.githubusercontent.com/arcimiedies/nothing-to-see-here/refs/heads/main/UGS-Files/EaglercraftZ_1.11.2.html"
+  }
+]
+</script>
+
+<script>
+  const data = JSON.parse(document.getElementById("linkData").textContent);
+  const container = document.getElementById("boxContainer");
+
+  data.forEach(item => {
+    const box = document.createElement("div");
+    box.className = "box";
+
+    box.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>${item.description}</p>
+      <button>Open</button>
+    `;
+
+    box.querySelector("button").onclick = async () => {
+      try {
+        const res = await fetch(item.url);
+        if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+
+        let html = await res.text();
+
+        const baseHref = item.url.slice(0, item.url.lastIndexOf('/') + 1);
+
+        if (/<head[^>]*>/i.test(html)) {
+          html = html.replace(
+            /<head([^>]*)>/i,
+            `<head$1><base href="${baseHref}">`
+          );
+        } else {
+          html = `<head><base href="${baseHref}"></head>` + html;
+        }
+
+        const w = window.open("about:blank");
+        if (!w) throw new Error("Popup blocked");
+
+        w.document.open();
+        w.document.write(html);
+        w.document.close();
+
+      } catch (err) {
+        console.error(err);
+        alert("Failed to load page: " + err.message);
+      }
+    };
+
+    container.appendChild(box);
+  });
+</script>
+
+</body>
+</html>
