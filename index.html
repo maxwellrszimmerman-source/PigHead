@@ -5,7 +5,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Game Hub</title>
 
-      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+      <link
+         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+         rel="stylesheet"
+      />
 
       <style>
          /* =========================
@@ -31,16 +34,20 @@
    BODY
 ========================= */
          body {
-            font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+            font-family:
+               "DM Sans",
+               system-ui,
+               -apple-system,
+               sans-serif;
             min-height: 100vh;
             display: flex;
             background: var(--bg);
             color: var(--text);
          }
-body {
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-}
+         body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+         }
          /* =========================
    SIDEBAR
 ========================= */
@@ -351,23 +358,23 @@ body {
          }
 
          /* ONLY favorites get star */
-.fav-item {
-   display: block;
-   padding: 8px;
-   border-radius: 10px;
-   border: 1px solid var(--border);
+         .fav-item {
+            display: block;
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
 
-   background: rgba(0,0,0,0.2);
-   color: var(--muted);
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--muted);
 
-   cursor: pointer;
-   transition: 0.2s;
-}
+            cursor: pointer;
+            transition: 0.2s;
+         }
 
-.fav-item:hover {
-   transform: translateX(3px);
-   border-color: var(--accent1);
-}
+         .fav-item:hover {
+            transform: translateX(3px);
+            border-color: var(--accent1);
+         }
       </style>
    </head>
 
@@ -420,249 +427,245 @@ body {
          const data = [
             {
                name: "Backrooms",
-               description:
-                  "Endless, maze-like alternate dimension of empty, yellow rooms.",
+               description: "endless yellow nightmare.",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/backrooms.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Backrooms.jpg?raw=true",
             },
             {
                name: "Balatro",
-               description: "Poker-inspired roguelike deck builder.",
+               description: "poker chaos builder",
                genre: "Card",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/balatro.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Balatro.jpg?raw=true",
             },
             {
                name: "Basketball Stars",
-               description: "Lebron",
+               description: "lebron simulator vibes",
                genre: "Sports",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/basketballstars.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/BasketballStars.jpg?raw=true",
             },
             {
                name: "Capybara Clicker",
-               description: "Idle clicker.",
+               description: "capybara inflation game",
                genre: "Idle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/capybaraclicker.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/CapybaraClicker.jpg?raw=true",
             },
             {
                name: "Cleanup.io",
-               description: "Vacume cleaner game.",
+               description: "vacuum warfare chaos",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/cleanupio.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/CleanUpio.jpg?raw=true",
             },
             {
                name: "Cluster Rush",
-               description: "Truck parkour.",
+               description: "truck jumping",
                genre: "Platformer",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/clusterrush.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/ClusterRush.jpg?raw=true",
             },
             {
                name: "Cookie Clicker",
-               description: "Idle cookies.",
+               description: "infinite cookie",
                genre: "Idle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/cookieclicker.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/CookieClicker.jpg?raw=true",
             },
             {
                name: "Crazy Cars",
-               description: "Driving stunts.",
+               description: "car chaos physics",
                genre: "Driving",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/crazycars.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/CrazyCars.jpg?raw=true",
             },
             {
                name: "Crazy Motercycle",
-               description: "Minecraft Motercycle Madness.",
+               description: "blocky bike madness",
                genre: "Driving",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/crazymotorcycle.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/CrazyMotercycle.jpg?raw=true",
             },
             {
                name: "Crossy Road",
-               description: "Cross safely.",
+               description: "why did chicken",
                genre: "Arcade",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/crossyroad.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/CrossyRoad.jpg?raw=true",
             },
             {
                name: "Cupcakes 2048",
-               description: "2048 just with cupcakes.",
+               description: "sweet number merging",
                genre: "Puzzle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/2048cupcakes.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Cupcakes2048.jpg?raw=true",
             },
             {
                name: "Drive Mad",
-               description: "Physics driving game.",
+               description: "rage driving simulator",
                genre: "Driving",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/drivemad.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/DriveMad.jpg?raw=true",
             },
             {
                name: "Drift Boss",
-               description: "One-button driving.",
+               description: "one button driving",
                genre: "Driving",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/driftboss.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/DriftBoss.jpg?raw=true",
             },
             {
                name: "Dread head parkour",
-               description: "Dude with dreads deos parkour.",
+               description: "dread jump chaos",
                genre: "Platformer",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/dreadheadparkour.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Dreads.jpg?raw=true",
             },
             {
                name: "FNAF",
-               description: "Dead children possess robots.",
+               description: "robot horror panic",
                genre: "Horror",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/fnaf.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Fnaf.jpg?raw=true",
             },
             {
                name: "Flappy Bird",
-               description: "Flaaaaap",
+               description: "flaaaaap",
                genre: "Arcade",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/flappybird.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/FlappyBird.jpg?raw=true",
             },
             {
                name: "Fruit Ninja",
-               description: "Slice fruit.",
+               description: "slice fruit",
                genre: "Arcade",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/fruitninja.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/FruitNinja.jpg?raw=true",
             },
             {
                name: "Mario 64",
-               description: "Get all the stars. Before it's too late.",
+               description: "nostalgia platform heaven",
                genre: "Arcade",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/mario64.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Mario64.jpg?raw=true",
             },
             {
                name: "Minecraft",
-               description: "Classic sandbox survival experience.",
+               description: "blocky world addiction",
                genre: "Sandbox",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/1.8.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Minecraft.jpg?raw=true",
             },
             {
                name: "Monkey Mart",
-               description: "Sell food to monkeys.",
+               description: "monkey capitalism simulator",
                genre: "Idle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/monkeymart.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/MonkeyMart.jpg?raw=true",
             },
             {
                name: "MotoX3M",
-               description:
-                  "A fast-paced stunt bike racing game with challenging obstacles. Need to fullscreen it.",
+               description: "flip or die",
                genre: "Driving",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/motox3m.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/MotoX3M.jpg?raw=true",
             },
             {
                name: "OvO",
-               description: "Stickman platformer game focusing on parkour.",
+               description: "stickman parkour",
                genre: "Platformer",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/ovo.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/OvO.jpg?raw=true",
             },
             {
                name: "Paper.io",
-               description: "Try to cover the whole map!",
+               description: "territory stealing experience",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/paperio2.htm",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Paperio.jpg?raw=true",
             },
             {
                name: "Ragdoll Archers",
-               description: "Archery battles.",
+               description: "floppy arrow battles",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/ragdollarchers.htm",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/RagdollArchers.jpg?raw=true",
             },
             {
                name: "Retro Bowl",
-               description: "Football manager.",
+               description: "pixel football grind",
                genre: "Sports",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/retrobowl.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/RetroBowl.jpg?raw=true",
             },
             {
                name: "Retro Bowl College",
-               description: "Retro Bowl but worse dudes.",
+               description: "worse football grind",
                genre: "Sports",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/retrobowlcollege.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/RetroBowlCollege.jpg?raw=true",
             },
             {
                name: "Slope",
-               description: "Speed ball game.",
+               description: "ball speed suffering",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/slope.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Slope.jpg?raw=true",
             },
             {
                name: "Snowball.io",
-               description:
-                  "Build up a snowball and launch it at other players.",
+               description: "ice ball warfare",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/snowballio.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Snowballio.jpg?raw=true",
             },
             {
                name: "Stack",
-               description: "Stack timing.",
+               description: "timing",
                genre: "Puzzle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/stack.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Stack.jpg?raw=true",
             },
             {
                name: "Stick Fighter",
-               description:
-                  "Physics-based multiplayer game where stick figures battle.",
+               description: "stickman violence lab",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/stickfighter.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/StickFighter.jpg?raw=true",
             },
             {
                name: "Stickman Hook",
-               description: "Swing through obstacles.",
+               description: "swingy jumps",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/stickmanhook.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/StickmanHook.jpg?raw=true",
             },
             {
                name: "Time Shooter",
-               description: "A shooter where time advances only when you move.",
+               description: "bullet time matrix",
                genre: "Action",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/timeshooter2.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/TimeShooter.jpg?raw=true",
             },
             {
                name: "TinyFishing",
-               description: "Fishing idle game.",
+               description: "relaxing fish catching",
                genre: "Idle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/tinyfishing.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/TinyFishing.jpg?raw=true",
             },
             {
                name: "Unlimited Wordle",
-               description: "Play unlimited Wordle puzzles.",
+               description: "Wordle",
                genre: "Puzzle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/wordleunlimited.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/Wordle.jpg?raw=true",
             },
             {
                name: "2048",
-               description: "Merge tiles puzzle.",
+               description: "2048",
                genre: "Puzzle",
                url: "https://raw.githubusercontent.com/CorduroyBrick49/Games/refs/heads/main/2048.html",
                image: "https://github.com/CorduroyBrick49/Games/blob/main/Images/2048.jpg?raw=true",
@@ -769,24 +772,24 @@ body {
                btn.textContent = item.name;
 
                btn.onclick = async () => {
-   const res = await fetch(item.url);
-   let html = await res.text();
+                  const res = await fetch(item.url);
+                  let html = await res.text();
 
-   const base = item.url.slice(0, item.url.lastIndexOf("/") + 1);
+                  const base = item.url.slice(0, item.url.lastIndexOf("/") + 1);
 
-   if (/<head/i.test(html)) {
-      html = html.replace(
-         /<head([^>]*)>/i,
-         `<head$1><base href="${base}">`
-      );
-   } else {
-      html = `<head><base href="${base}"></head>` + html;
-   }
+                  if (/<head/i.test(html)) {
+                     html = html.replace(
+                        /<head([^>]*)>/i,
+                        `<head$1><base href="${base}">`,
+                     );
+                  } else {
+                     html = `<head><base href="${base}"></head>` + html;
+                  }
 
-   const w = window.open("about:blank");
-   w.document.write(html);
-   w.document.close();
-};
+                  const w = window.open("about:blank");
+                  w.document.write(html);
+                  w.document.close();
+               };
 
                favoritesBar.appendChild(btn);
             });
